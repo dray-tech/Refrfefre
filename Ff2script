@@ -1,36 +1,5 @@
-
-
-if getgenv().bleach then warn("Bleachhack is already executed") return end
-getgenv().bleach = true
-
-
-loadstring([[
-    function LPH_NO_VIRTUALIZE(f) return f end;
-]])();
-
-local debris = game:GetService("Debris")
-local contentProvider = game:GetService("ContentProvider")
-local scriptContext = game:GetService("ScriptContext")
-local players = game:GetService("Players")
-local tweenService = game:GetService("TweenService")
-local statsService = game:GetService("Stats")
-local runService = game:GetService("RunService")
-local userInputService = game:GetService("UserInputService")
-local replicatedStorage = game:GetService("ReplicatedStorage")
-local httpService = game:GetService("HttpService")
-local starterGui = game:GetService("StarterGui")
-
-local player = players.LocalPlayer
-local mouse = player:GetMouse()
-local camera = workspace.CurrentCamera
-local values = replicatedStorage:FindFirstChild("Values")
-
-
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/coast%20old"))()
 local UI = Lib:Create()
-
-return Window
-end
 
 local configSavingUI = game:GetObjects("rbxassetid://18187656247")[1]:Clone()
 configSavingUI.Parent = (gethui and gethui()) or game:GetService("CoreGui")
@@ -2313,6 +2282,7 @@ local Load = Configs:CreateModule("Load", true, function()
 	
 	UI:Import(contents)
 end)
+
 
 
 
